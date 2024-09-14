@@ -21,21 +21,20 @@ export async function middleware(request) {
   if (request.nextUrl.pathname.startsWith('/list')) {
     console.log(request.headers.get('sec-ch-ua-platform'))
     console.log(new Date())
-   
   }
 
   return NextResponse.next()
 
-  request.cookies.get('쿠키이름') // 출력
-  request.cookies.has('쿠키이름') // 존재확인
-  request.cookies.delete('쿠키이름')  // 삭제
+  // request.cookies.get('쿠키이름') // 출력
+  // request.cookies.has('쿠키이름') // 존재확인
+  // request.cookies.delete('쿠키이름')  // 삭제
 
-  const response = NextResponse.next()
-  response.cookies.set({
-    name: 'mode',
-    value: 'dark',
-    maxAge: 3600,
-    hasOnlu: true,
-  })
-  return response
+  // const response = NextResponse.next()
+  // response.cookies.set({
+  //   name: 'mode',
+  //   value: 'dark',
+  //   maxAge: 3600,
+  //   hasOnlu: true,
+  // })
+  // return response
 }
